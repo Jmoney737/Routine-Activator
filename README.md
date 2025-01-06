@@ -53,7 +53,7 @@
         }
     </style>
 </head>
-<body
+<body>
     <p>Click on a button to activate the corresponding routine.</p>
     <div class="button-container">
 
