@@ -68,6 +68,10 @@
             color: #A88C7D;
             margin-bottom: 15px;
         }
+        .card .button-group {
+            display: flex;
+            gap: 10px;
+        }
         .card button {
             background-color: #A88C7D;
             color: #FFF;
@@ -138,14 +142,11 @@
         <div class="dashboard-container">
             <div class="card">
                 <i class="fas fa-lightbulb"></i>
-                <p>Kitchen Group On</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=5846a7ff-8452-4c2f-81c7-65792b5cfbcb&token=57d238c9-34e8-4bdd-9bd8-76f34bbeb544', 'Kitchen Group On', this)">Activate</button>
-                <p class="status">Status: <span class="status-indicator">OFF</span></p>
-            </div>
-            <div class="card">
-                <i class="fas fa-lightbulb"></i>
-                <p>Kitchen Group Off</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111&token=5405bd16-657c-487b-a635-5422deae8015', 'Kitchen Group Off', this)">Activate</button>
+                <p>Kitchen Group</p>
+                <div class="button-group">
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=5846a7ff-8452-4c2f-81c7-65792b5cfbcb&token=57d238c9-34e8-4bdd-9bd8-76f34bbeb544', 'Kitchen Group On', this)">On</button>
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111&token=5405bd16-657c-487b-a635-5422deae8015', 'Kitchen Group Off', this)">Off</button>
+                </div>
                 <p class="status">Status: <span class="status-indicator">OFF</span></p>
             </div>
         </div>
@@ -156,20 +157,20 @@
         <div class="dashboard-container">
             <div class="card">
                 <i class="fas fa-lightbulb"></i>
-                <p>Living Room Group On</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=39168a11-14c6-4bfb-8504-a73578a37555&token=a2b9357b-2a6a-4277-b2ac-3fe59fc0a80e', 'Living Room Group On', this)">Activate</button>
-                <p class="status">Status: <span class="status-indicator">OFF</span></p>
-            </div>
-            <div class="card">
-                <i class="fas fa-lightbulb"></i>
-                <p>Living Room Group Off</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c&token=f34fc986-2182-4d80-816e-4cb08e3f7578', 'Living Room Group Off', this)">Activate</button>
+                <p>Living Room Group</p>
+                <div class="button-group">
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=39168a11-14c6-4bfb-8504-a73578a37555&token=a2b9357b-2a6a-4277-b2ac-3fe59fc0a80e', 'Living Room Group On', this)">On</button>
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c&token=f34fc986-2182-4d80-816e-4cb08e3f7578', 'Living Room Group Off', this)">Off</button>
+                </div>
                 <p class="status">Status: <span class="status-indicator">OFF</span></p>
             </div>
             <div class="card">
                 <i class="fas fa-tv"></i>
-                <p>Living Room TV Off</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c&token=f34fc986-2182-4d80-816e-4cb08e3f7578', 'Living Room TV Off', this)">Activate</button>
+                <p>Living Room TV</p>
+                <div class="button-group">
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c&token=f34fc986-2182-4d80-816e-4cb08e3f7578', 'Living Room TV On', this)">On</button>
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c&token=f34fc986-2182-4d80-816e-4cb08e3f7578', 'Living Room TV Off', this)">Off</button>
+                </div>
                 <p class="status">Status: <span class="status-indicator">OFF</span></p>
             </div>
         </div>
@@ -180,26 +181,11 @@
         <div class="dashboard-container">
             <div class="card">
                 <i class="fas fa-lightbulb"></i>
-                <p>Office Group On</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=747403c7-9a9f-4a47-9a80-0f6923b5c4d0&token=50f5e41a-50c5-4802-9d4f-a673d38c2491', 'Office Group On', this)">Activate</button>
-                <p class="status">Status: <span class="status-indicator">OFF</span></p>
-            </div>
-            <div class="card">
-                <i class="fas fa-lightbulb"></i>
-                <p>Office Group Off</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111&token=5405bd16-657c-487b-a635-5422deae8015', 'Office Group Off', this)">Activate</button>
-                <p class="status">Status: <span class="status-indicator">OFF</span></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="room-section">
-        <h2 class="room-title">Miscellaneous</h2>
-        <div class="dashboard-container">
-            <div class="card">
-                <i class="fas fa-cogs"></i>
-                <p>His Foot Warmer</p>
-                <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=5ccd3194-2ede-4c84-ad8b-1c8f54dcf746&token=a277612f-08a5-4c9f-86f3-f1ca35841a08', 'His Foot Warmer', this)">Activate</button>
+                <p>Office Group</p>
+                <div class="button-group">
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=747403c7-9a9f-4a47-9a80-0f6923b5c4d0&token=50f5e41a-50c5-4802-9d4f-a673d38c2491', 'Office Group On', this)">On</button>
+                    <button onclick="triggerRoutineWithFeedback('https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111&token=5405bd16-657c-487b-a635-5422deae8015', 'Office Group Off', this)">Off</button>
+                </div>
                 <p class="status">Status: <span class="status-indicator">OFF</span></p>
             </div>
         </div>
@@ -216,7 +202,7 @@
 
         function triggerRoutineWithFeedback(url, name, button) {
             const feedback = document.getElementById('feedback');
-            const statusIndicator = button.parentNode.querySelector('.status-indicator');
+            const statusIndicator = button.parentNode.parentNode.querySelector('.status-indicator');
             feedback.style.display = 'block';
             feedback.innerText = `Activating ${name}...`;
             fetch(url)
@@ -224,8 +210,8 @@
                     feedback.style.display = 'none';
                     if (response.ok) {
                         alert(`${name} activated successfully!`);
-                        statusIndicator.innerText = 'ON';
-                        statusIndicator.style.color = 'green';
+                        statusIndicator.innerText = name.includes("Off") ? "OFF" : "ON";
+                        statusIndicator.style.color = name.includes("Off") ? "red" : "green";
                     } else {
                         alert(`Failed to activate ${name}. Please try again later.`);
                     }
