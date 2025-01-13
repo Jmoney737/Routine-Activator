@@ -115,8 +115,6 @@
     </style>
 </head>
 <body>
-    <h1>Routine Dashboard</h1>
-
     <!-- Global Controls -->
     <div class="global-controls">
         <button onclick="toggleAll('on')">Turn Everything ON</button>
@@ -167,38 +165,31 @@
     </div>
 
     <script>
-        function triggerRoutine(url) {
-            alert("Triggering routine...");
-            fetch(url)
-                .then(response => {
-                    if (response.ok) {
-                        alert("Routine triggered successfully!");
-                    } else {
-                        alert("Failed to trigger routine. Status: " + response.status);
-                    }
-                })
-                .catch(() => {
-                    alert("Error connecting to the routine.");
-                });
-        }
-
         function toggleAll(action) {
-            const urls = [
-                'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=5846a7ff-8452-4c2f-81c7-65792b5cfbcb', // Kitchen On
-                'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=39168a11-14c6-4bfb-8504-a73578a37555', // Living Room On
-                'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=747403c7-9a9f-4a47-9a80-0f6923b5c4d0' // Office On
-            ];
-            if (action === 'off') {
-                urls[0] = 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111'; // Kitchen Off
-                urls[1] = 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c'; // Living Room Off
-                urls[2] = 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=e458094d-4c7a-42b8-8d7c-61b0bcaca741'; // Office Off
-            }
-            urls.forEach(url => triggerRoutine(url));
-        }
+    const urls = [
+        // Kitchen Group
+        action === 'on'
+            ? 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=5846a7ff-8452-4c2f-81c7-65792b5cfbcb'
+            : 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=f909cd87-e74a-4c94-bf0a-91d88c567111',
+        
+        // Living Room Group
+        action === 'on'
+            ? 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=39168a11-14c6-4bfb-8504-a73578a37555'
+            : 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1f805a37-03bd-404d-b781-0d7c4f8a051c',
+        
+        // NFC - Living Room
+        action === 'on'
+            ? 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=43a345bd-7137-4efb-bcf3-d1138b11652f'
+            : 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=b549ddb0-1824-40cb-8162-3fde4f2de6f6',
 
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-        }
+        // Office Group
+        action === 'on'
+            ? 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=747403c7-9a9f-4a47-9a80-0f6923b5c4d0'
+            : 'https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=e458094d-4c7a-42b8-8d7c-61b0bcaca741'
+    ];
+
+    urls.forEach(url => triggerRoutine(url));
+}
     </script>
 </body>
 </html>
