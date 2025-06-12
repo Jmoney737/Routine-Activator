@@ -221,7 +221,6 @@
         </h2>
         <div class="section-content">
             <ul>
-                <li><strong>Thermostat:</strong> Don’t Touch.</li>
                 <li><strong>Smart TV:</strong> YouTube TV, Hulu, Netflix, Disney, Prime Video.</li>
                 <li>
                     <strong>Washer/Dryer:</strong> Use the AI Opti Wash & Dry Setting. Detergent is automatically dispensed. Clean filter before use.
